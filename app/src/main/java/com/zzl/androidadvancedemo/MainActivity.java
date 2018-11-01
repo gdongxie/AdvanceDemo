@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.zzl.androidadvancedemo.chapter2.MaterialDesignActivity;
+import com.zzl.androidadvancedemo.chapter3.ViewActivity;
 
 import java.util.List;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CardView cardView1;
     @BindView(R.id.card_02)
     CardView cardView2;
+    @BindView(R.id.card_03)
+    CardView cardView3;
     private Intent intent;
 
     @Override
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setListener() {
         cardView1.setOnClickListener(this);
         cardView2.setOnClickListener(this);
+        cardView3.setOnClickListener(this);
     }
 
 
@@ -51,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.card_02:
                 intent = new Intent(this, MaterialDesignActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.card_03:
+                intent = new Intent(this, ViewActivity.class);
                 startActivity(intent);
                 break;
             default:
