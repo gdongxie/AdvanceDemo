@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 public class CustomView extends View {
     private int lastX;
@@ -37,12 +38,20 @@ public class CustomView extends View {
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
                 // 第一种方法调用layout()方法重新放置它的位置
-          //      layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
+                layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
+
+
                 //第二种方法调用offsetLeftAndRight()与offsetTopAndBottom
                 //对left和right进行偏移
-                offsetLeftAndRight(offsetX);
+                //  offsetLeftAndRight(offsetX);
                 //对top和bottom进行偏移
-                offsetTopAndBottom(offsetY);
+                //  offsetTopAndBottom(offsetY);
+
+                //第三种改变布局参数
+//                LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) getLayoutParams();
+//                layoutParams.leftMargin = getLeft() + offsetX;
+//                layoutParams.topMargin = getTop() + offsetY;
+//                setLayoutParams(layoutParams);
                 break;
             default:
                 break;
