@@ -1,7 +1,7 @@
 package com.zzl.androidadvancedemo.chapter3;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
@@ -22,6 +22,6 @@ public class CustomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom);
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
-        tv_title.setText("自定义view");
+        tv_title.setText("自定义View");
     }
 }
