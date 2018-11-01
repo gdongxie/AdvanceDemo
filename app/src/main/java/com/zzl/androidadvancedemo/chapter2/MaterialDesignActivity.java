@@ -1,60 +1,53 @@
-package com.zzl.androidadvancedemo;
+package com.zzl.androidadvancedemo.chapter2;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.zzl.androidadvancedemo.chapter2.MaterialDesignActivity;
-
-import java.util.List;
+import com.zzl.androidadvancedemo.R;
 
 import butterknife.BindView;
-import butterknife.BindViews;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MaterialDesignActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.tv_title)
     TextView tv_title;
-    @BindView(R.id.card_01)
-    CardView cardView1;
-    @BindView(R.id.card_02)
-    CardView cardView2;
+    @BindView(R.id.btn_snackbar)
+    Button btn_snackbar;
     private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_material_design);
         ButterKnife.bind(this);
         setSupportActionBar(mToolbar);
-        tv_title.setText("选择章节");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        tv_title.setText("Material Design各控件");
         setListener();
     }
 
     private void setListener() {
-        cardView1.setOnClickListener(this);
-        cardView2.setOnClickListener(this);
+        btn_snackbar.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.card_01:
 
-                break;
-            case R.id.card_02:
-                intent = new Intent(this, MaterialDesignActivity.class);
+        switch (v.getId()) {
+            case R.id.btn_snackbar:
+                intent = new Intent(this, SnackBarActivity.class);
                 startActivity(intent);
                 break;
             default:
                 break;
         }
+
     }
 }
