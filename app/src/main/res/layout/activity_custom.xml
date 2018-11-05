@@ -14,15 +14,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:gravity="center"
         android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="点击拖动"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="点击拖动" />
+        android:textStyle="bold" />
 
     <com.zzl.androidadvancedemo.chapter3.CustomView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="50dp"
+        android:layout_margin="10dp"
         android:background="@android:color/holo_red_light" />
+
+    <com.zzl.androidadvancedemo.chapter3.InvalidTextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="I love Android "
+        android:textSize="16sp" />
+
+    <com.zzl.androidadvancedemo.chapter3.ReactView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        app:react_color="@android:color/holo_green_light" />
 </LinearLayout>

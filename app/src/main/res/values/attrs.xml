@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--定义了名为ReactView的自定义属性组合，定义了属性名称为react_color 格式为color-->
+<resources>
+    <declare-styleable name="ReactView">
+        <attr name="react_color" format="color" />
+    </declare-styleable>
+
+</resources>
