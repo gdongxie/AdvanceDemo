@@ -25,7 +25,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="10dp"
                 android:gravity="center"
-                android:text="customView"
+                android:text="自定义View"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
