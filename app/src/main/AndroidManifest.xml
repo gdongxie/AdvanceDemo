@@ -20,7 +20,8 @@
         <activity android:name=".chapter2.SnackBarActivity" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".chapter3.ViewActivity" />
-        <activity android:name=".chapter3.CustomActivity"></activity>
+        <activity android:name=".chapter3.CustomActivity" />
+        <activity android:name=".chapter3.CombinationActivity"></activity>
     </application>
 
 </manifest>

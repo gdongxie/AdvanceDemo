@@ -20,6 +20,8 @@ public class ViewActivity extends AppCompatActivity {
     TextView tv_title;
     @BindView(R.id.btn_customview)
     Button btn_custom;
+    @BindView(R.id.btn_combination)
+    Button btn_combination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,13 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this, CustomActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_combination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewActivity.this, CombinationActivity.class);
                 startActivity(intent);
             }
         });

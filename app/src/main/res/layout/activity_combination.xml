@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".chapter3.CombinationActivity">
+
+    <com.zzl.androidadvancedemo.chapter3.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title_bg="@android:color/white"
+        app:title_text="自定义组合控件"
+        app:title_text_color="@android:color/holo_blue_dark"></com.zzl.androidadvancedemo.chapter3.TitleBar>
+</LinearLayout>
