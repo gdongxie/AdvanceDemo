@@ -2,21 +2,34 @@ package com.zzl.androidadvancedemo.chapter3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.zzl.androidadvancedemo.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class CustomViewGroupActivity extends AppCompatActivity {
-    private ListView lv_one;
-    private ListView lv_two;
+    @BindView(R.id.title)
+    TitleBar mTitleBar;
+    @BindView(R.id.lv_one)
+    ListView lv_one;
+    @BindView(R.id.lv_two)
+    ListView lv_two;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view_group);
-        lv_one = findViewById(R.id.lv_one);
-        lv_two = findViewById(R.id.lv_two);
+        ButterKnife.bind(this);
+        mTitleBar.setLeftListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         String[] str1 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"};
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, str1);
         lv_one.setAdapter(adapter1);
