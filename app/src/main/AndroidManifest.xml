@@ -21,7 +21,8 @@
         <activity android:name=".SplashActivity" />
         <activity android:name=".chapter3.ViewActivity" />
         <activity android:name=".chapter3.CustomActivity" />
-        <activity android:name=".chapter3.CombinationActivity"></activity>
+        <activity android:name=".chapter3.CombinationActivity" />
+        <activity android:name=".chapter3.CustomViewGroupActivity"></activity>
     </application>
 
 </manifest>

@@ -22,6 +22,8 @@ public class ViewActivity extends AppCompatActivity {
     Button btn_custom;
     @BindView(R.id.btn_combination)
     Button btn_combination;
+    @BindView(R.id.btn_viewgroup)
+    Button btn_viewgroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,13 @@ public class ViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewActivity.this, CombinationActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_viewgroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ViewActivity.this, CustomViewGroupActivity.class);
                 startActivity(intent);
             }
         });
